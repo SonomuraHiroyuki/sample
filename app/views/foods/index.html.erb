@@ -1,0 +1,8 @@
+<h1>本日の買い物を入力しましょう</h1>
+<%= link_to "本日の買い物を入力","/foods/new"%>
+<div>
+本日までの買い物一覧
+</div>
+  <% @foods.each do |item| %>
+    <p><%= item.name %> : <%= item.price %></p>
+  <% end %>
