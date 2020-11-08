@@ -11,7 +11,7 @@ class FoodsController < ApplicationController
   end
 
   def create
-    Food.create!(name: item_params[:name], price: item_params[:price], user_id: current_user.id)
+    Food.create(food_params)
   end
 
   def edit
@@ -21,6 +21,12 @@ class FoodsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def food_params
+    params.require(:post).permit(:name, :price)
   end
 
 end

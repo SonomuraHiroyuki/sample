@@ -1,5 +1,5 @@
 <h1>本日の買い物内容</h1>
-<%= form_with model:@food , local: true do |f|%>
+<%= form_with model: @food , local: true do |f|%>
   <div>
     <%= f.label :name, "買ったもの" %>
     <%= f.text_field :name %>
@@ -10,9 +10,9 @@
   </div>
 
   <div>
-    <%= f.submit "登録" redirect controller: :new%>
+    <%= f.submit "登録" %>
   </div>
   <div>
-    <%= link_to "一覧画面へ", "/foods/index" %>
+    <%= link_to "一覧画面へ","/foods/index"%>
   </div>
   <%end%>
